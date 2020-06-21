@@ -1066,6 +1066,12 @@ retryScene:
 		opt_start_replaybuffer = false;
 	}
 
+	if (opt_start_virtualcam) {
+		QMetaObject::invokeMethod(this, "StartVirtualCam",
+					  Qt::QueuedConnection);
+		opt_start_virtualcam = false;
+	}
+
 	copyStrings.clear();
 	copyFiltersString = nullptr;
 
