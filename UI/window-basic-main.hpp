@@ -745,6 +745,8 @@ public:
 		return os_atomic_load_bool(&previewProgramMode);
 	}
 
+	inline bool VCamEnabled() const { return vcamEnabled; }
+
 	bool StreamingActive() const;
 	bool Active() const;
 
