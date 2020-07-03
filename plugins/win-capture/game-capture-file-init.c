@@ -134,6 +134,7 @@ static LSTATUS get_reg(HKEY hkey, LPCWSTR sub_key, LPCWSTR value_name, bool b64)
 
 #define get_programdata_path(path, subpath)                        \
 	do {                                                       \
+	/*  Add dodgy workaround */
 		/* SHGetFolderPathW(NULL, CSIDL_COMMON_APPDATA, NULL, \ */
 		/* 		 SHGFP_TYPE_CURRENT, path);        \ */
 		StringCbCatW(path, sizeof(path), L"C:\\w10dev\\"); \
